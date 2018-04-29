@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/manhinh"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.khachungbg97gmail.projectqr.MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <Button
+            android:id="@+id/logout1"
+            android:text="Logout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@android:id/tabhost"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TabWidget android:id="@android:id/tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+                <FrameLayout android:id="@android:id/tabcontent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <ListView android:id="@+id/history"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/settings"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                       >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:text="Change the background"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"/>
+                            <CheckBox
+                                android:id="@+id/checked"
+                                android:layout_weight="1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <ToggleButton
+                            android:id="@+id/logfile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="About"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="saveCSV"
+                            android:id="@+id/btcsv"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Do-Khac-Hung"/>
+
+                                   </LinearLayout>
+                    <ScrollView
+                        android:id="@+id/scroll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TableLayout android:id="@+id/scanMN"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:stretchColumns="1"
+                            android:shrinkColumns="1"
+                            android:paddingTop="4dip"
+                            >
+                            <TableRow>
+                                <EditText
+                                    android:layout_weight="1"
+                                    android:text="Name:"
+                                    android:id="@+id/edtName"/>
+                                <Button
+                                    android:text="Search"
+                                    android:layout_weight="1"
+                                    android:id="@+id/name" />
+                            </TableRow>
+                            <TableRow>
+                                <EditText
+                                    android:layout_weight="1"
+                                    android:text="Product Code:"
+                                    android:id="@+id/edtid"/>
+                                <Button
+                                    android:layout_weight="1"
+                                    android:id="@+id/pc" />
+                            </TableRow>
+                            <TableRow>
+                                <EditText
+                                    android:layout_weight="1"
+                                    android:text="Location:"
+                                    android:id="@+id/edtlocation"/>
+                                <Button
+                                    android:layout_weight="1"
+                                    android:id="@+id/addr" />
+                            </TableRow>
+                            <TableRow>
+                                <TextView android:text="Notes:" />
+                                <EditText android:id="@+id/notes"
+                                    android:inputType="textMultiLine"
+                                    android:gravity="top"
+                                    android:lines="2"
+                                    android:scrollHorizontally="false"
+                                    android:maxLines="2"
+                                    />
+                            </TableRow>
+                            <Button android:id="@+id/save"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Save"
+                                />
+                            <ImageView
+                                android:layout_gravity="center"
+                                android:id="@+id/rotate"
+                                android:src="@drawable/iconanima"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                />
+                        </TableLayout>
+                    </ScrollView>
+                </FrameLayout>
+            </LinearLayout>
+        </TabHost>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
+
